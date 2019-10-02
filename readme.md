@@ -56,4 +56,4 @@ This app is intended to get you up and running quickly with a very basic Okta au
 
 * [Okta developer: Okta Sign-In Widget Guide](https://developer.okta.com/code/javascript/okta_sign-in_widget)
 * [Okta sign-in widget github repo](https://github.com/okta/okta-signin-widget)
-* [](https://developer.okta.com/live-widget/)
+* [Okta live widget](https://developer.okta.com/live-widget/)

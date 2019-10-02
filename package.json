@@ -4,7 +4,8 @@
   "description": "This is intended to be the shortest possible path to get you up and running with the Okta authentication widget.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "tom.smith@okta.com",
   "license": "ISC",
