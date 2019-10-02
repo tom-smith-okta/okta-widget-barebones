@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+	<title>Okta simple widget</title>
+
+	<link rel='shortcut icon' href='https://www.okta.com/sites/all/themes/developer/favicon.ico' type='image/vnd.microsoft.icon' />
+
+	<!--************************************************************************-->
+	<!-- JAVASCRIPT -->
+
+	<script src='{{okta_widget_url}}'></script>
+
+	<!--************************************************************************-->
+	<!-- CSS -->
+
+	<link href='{{okta_widget_css_min}}' type='text/css' rel='stylesheet'/>
+
+	<script>
+	/***************************************************************************/
+
+	var baseUrl = '{{okta_tenant_url}}'
+
+	/***************************************************************************/
+
+	var signIn = new OktaSignIn({
+		baseUrl: baseUrl
+	})
+
+	window.onload = function() {
+
+		signIn.session.get(function (res) {
+			// Session exists, show logged in state.
+			if (res.status === 'ACTIVE') {
+				console.log('User has an Okta session.')
+				console.dir(res)
+			}
+			// No session, or error retrieving the session. Render the Sign-In Widget.
+			else if (res.status === 'INACTIVE') {
+				signIn.renderEl(
+					{ el: '#widget-container' },
+					function success(res) {
+						res.session.setCookieAndRedirect(window.location.href)
+					},
+					function error(err) {
+						console.log(err)
+					}
+				);
+			}
+		});
+	}
+
+	</script>
+
+</head>
+
+<body style='text-align: center'>
+
+	<div id='widget-container'></div>
+
+</body>
+
+</html>
