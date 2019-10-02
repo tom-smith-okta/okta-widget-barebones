@@ -2,5 +2,5 @@
 	"okta_tenant_url": "https://dev-638451.okta.com",
 
 	"okta_widget_url": "https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/3.2.0/js/okta-sign-in.min.js",
-	"okta_widget_css_min": "https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/3.2.0/css/okta-sign-in.min.css",
+	"okta_widget_css_min": "https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/3.2.0/css/okta-sign-in.min.css"
 }
